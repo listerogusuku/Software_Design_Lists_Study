@@ -18,11 +18,11 @@
 numbers = []
 
 i = 0
+c = 0
 
 while i < 5:
     n = float(input('Digite um número a ser adicionado à lista: '))
     numbers.append(n)
     i+=1
-
 
 
