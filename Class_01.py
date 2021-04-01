@@ -101,6 +101,9 @@ print(lista_repetidos)
 print(lista3)
 '''
 
+
+'''
+
 #JACA WARS
 
 
@@ -123,3 +126,139 @@ elif d > 102:
     print('Muito longe')
 else:
     print('Acertou!')
+
+
+'''
+
+'''
+
+def classifica_idade(x):
+    if x <= 11:
+        return 'crianca'
+    elif x <= 17:
+        return 'adolescente'
+    else:
+        return 'adulto'
+
+
+
+'''
+'''
+
+velocity = float(input('Type the cars velocity: '))
+
+if velocity > 80:
+    print(f'Você foi multado! A multa será de R${((80-velocity)*5)*-1:.2f}')
+else:
+    print('Não foi multado')
+
+
+'''
+
+
+'''
+def calcula_aumento(salary):
+    aumento = 0
+    if salary > 1250:
+        aumento = salary*0.1
+    elif salary <= 1250:
+        aumento = salary*0.15
+    return aumento
+'''
+
+'''
+def calcula_pi(n):
+    i = 1
+    contador = 0
+    while i <= n:
+        formula = 6/(i**2)
+        contador += formula
+        i+=1
+    resultado = contador**0.5
+    return resultado
+'''
+
+
+'''
+def maximo_divisor_comum(x, y):
+    if x > y:
+        divisao = x%y
+        acumulador = divisao
+        if divisao > 0:
+            i=1
+            while i > 0:
+                divisao = y%divisao
+                if divisao > 0:
+                    acumulador = divisao
+                else:
+                    break
+
+                if acumulador>0:
+                    nova_divisao = (y-acumulador)/acumulador
+
+                if nova_divisao > 0:
+                    i+=1
+                    y = y-acumulador
+                else:
+                    break
+        else:
+            acumulador = divisao
+
+    else:
+        divisao = y%x
+        acumulador = divisao
+
+        print(divisao)
+
+        if divisao > 0:
+            i=1
+            while i > 0:
+                divisao = x%divisao
+                if divisao > 0:
+                    acumulador = divisao
+                else:
+                    break
+
+                if acumulador>0:
+                    nova_divisao = (x-acumulador)/acumulador
+
+                if nova_divisao > 0:
+                    i+=1
+                    x = x-acumulador
+                else:
+                    break
+        else:
+            acumulador = divisao
+
+    return acumulador
+
+valor1 = int(input('Digite o valor 1: '))
+valor2 = int(input('Digite o valor 2: '))
+
+print(maximo_divisor_comum(valor1, valor2))
+'''
+
+
+def eh_primo(n):
+    if n == 0 or n == 1:# or n == 4:
+        return False
+    if n == 2:
+        return True
+    if n % 2 == 0:
+        return False
+    else:
+        i = 3
+        while i < n:
+            verificador = n % i
+            if verificador != 0:
+                i+=1
+            else:
+                return False
+        # return True
+    return True
+
+
+verifica = int(input('Digite um número a ser verificado: '))
+
+print(eh_primo(verifica))
+
